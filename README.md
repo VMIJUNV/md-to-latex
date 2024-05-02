@@ -76,17 +76,18 @@ $$
     f(x)=f\left(x_{0}\right)+f^{\prime}\left(x_{0}\right)\left(x-x_{0}\right)+\frac{f^{\prime \prime}\left(x_{0}\right)}{2 !}\left(x-x_{0}\right)^{2}+\cdots
 \end{equation}
 ~~~
+
+> 编译后的效果
+
 ![演示2](/演示图片/公式演示.png)
 
 ## 图表
 > 转换前Markdown
 ~~~markdown
-### 图片
 ![图](/Data/测试图1.jpeg "图片测试1")
 
 [图](/Data/测试图2.jpg "图片测试2")
 
-### 表格
 
 |第一列|第二列|第三列|第四列|第五列|
 |:---:|:---:|:---:|:---:|:---:|
