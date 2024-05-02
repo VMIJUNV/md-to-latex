@@ -1,0 +1,19 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Run after save",
+            "type": "shell",
+            "command": "python",
+            "args": [
+                "Tool/md_to_latex.py", // 指定输出文件名
+            ],
+            "group": "build",
+            "problemMatcher": [],
+            "presentation": {
+                "reveal": "always",
+                "panel": "shared"
+            }
+        }
+    ],
+}
