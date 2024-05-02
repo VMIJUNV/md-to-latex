@@ -15,7 +15,7 @@ Word和LaTeX是论文写作常用的排版软件，二者各有优缺点，没�
 
 # 使用方法
 
-本项目已开源，可项目地址:https://github.com/VMIJUNV/md-to-latex
+本项目已开源，项目地址:https://github.com/VMIJUNV/md-to-latex
 
 下载好相关文件后，运行Tool文件夹中的md_to_latex.py，即可将Paper里的test.md转化为output.tex。
 
@@ -29,7 +29,7 @@ Word和LaTeX是论文写作常用的排版软件，二者各有优缺点，没�
 # 演示
 
 ## 段落标题列表
-
+> 转换前Markdown
 ~~~markdown
 演示文本**演示文本**演示文本*example*演示文本
 1.  有序列表1
@@ -38,6 +38,7 @@ Word和LaTeX是论文写作常用的排版软件，二者各有优缺点，没�
     -   无序列表
 ~~~
 
+> 转化后LaTeX
 ~~~latex
 演示文本\textbf{演示文本}演示文本\emph{example}演示文本
 \begin{itemize}
@@ -50,11 +51,13 @@ Word和LaTeX是论文写作常用的排版软件，二者各有优缺点，没�
 \end{itemize}
 ~~~
 
+> 编译后的效果
+
 ![演示1](/演示图片/段落标题列表演示.png)
 
 
 ## 公式
-
+> 转换前Markdown
 ~~~markdown
 行内公式: $\mathrm{e}^{x}=1+x+\frac{x^{2}}{2 !}+\cdots+\frac{x^{n}}{n !}+o\left(x^{n}\right)$。
 
@@ -64,6 +67,7 @@ f(x)=f\left(x_{0}\right)+f^{\prime}\left(x_{0}\right)\left(x-x_{0}\right)+\frac{
 $$
 ~~~
 
+> 转化后LaTeX
 ~~~latex
 行内公式: $\mathrm{e}^{x}=1+x+\frac{x^{2}}{2 !}+\cdots+\frac{x^{n}}{n !}+o\left(x^{n}\right)$。
 
@@ -75,6 +79,7 @@ $$
 ![演示2](/演示图片/公式演示.png)
 
 ## 图表
+> 转换前Markdown
 ~~~markdown
 ### 图片
 ![图](/Data/测试图1.jpeg "图片测试1")
@@ -90,6 +95,7 @@ $$
 [表](/Data/测试表.csv "表格测试")
 ~~~
 
+> 转化后LaTeX
 ~~~latex
 \subsubsection{图片}
 
@@ -128,10 +134,12 @@ $$
 \end{table}
 ~~~
 
+> 编译后的效果
+
 ![演示3](/演示图片/图表演示.png)
 
 ## 嵌入Latex代码
-
+> 转换前Markdown
 ```markdown
 引用图`\ref{图片测试1}`。
 
@@ -145,6 +153,7 @@ $$
 ~~~
 ```
 
+> 转化后LaTeX
 ~~~latex
 引用图\ref{图片测试1}。
 
@@ -155,5 +164,7 @@ $$
 \bibliographystyle{plain}
 \bibliography{\rootpath/Data/docu.bib}
 ~~~
+
+> 编译后的效果
 
 ![演示4](/演示图片/嵌入latex演示.png)
