@@ -1,14 +1,13 @@
 import mistune
+import os.path as op
+import sys
 from LaTeXRenderer import LaTeXRender
 from mistune.plugins.math import math
 from mistune.plugins.table import table
-
-Markdown_Path="Paper/test.md"
-Template_Path="Tool/template.latex"
-Latex_Path="Paper/output.tex"
+path=sys.path[0]
 
 
-# 表格模板(markdown原生)
+# 表格模板(markdown原生表格使用)
 table_template_text='''
 \\begin{table}[H]
     \\centering
@@ -22,7 +21,7 @@ table_template_text='''
 \\end{table}
 '''
 
-# 表格模板(引用文件)
+# 表格模板(引用csv文件使用)
 table_template_file='''
 \\begin{table}[H]
     \\centering
@@ -43,22 +42,30 @@ image_template='''
 '''
 
 
-with open(Markdown_Path, 'r', encoding='utf-8') as f:
-    markdown_text = f.read()
+Template_Path=op.join(path,"template.latex")
 
-with open(Template_Path, 'r', encoding='utf-8') as f:
-    template = f.read()
+def main(Markdown_Path):
+    with open(Markdown_Path, 'r', encoding='utf-8') as f:
+        markdown_text = f.read()
 
-render=LaTeXRender()
-render.table_template_file=table_template_file
-render.table_template_text=table_template_text
-render.image_template=image_template
+    with open(Template_Path, 'r', encoding='utf-8') as f:
+        template = f.read()
 
-markdown = mistune.create_markdown(renderer=render,plugins=[math,table])
+    render=LaTeXRender()
+    render.table_template_file=table_template_file
+    render.table_template_text=table_template_text
+    render.image_template=image_template
 
-latex=markdown(markdown_text)
+    markdown = mistune.create_markdown(renderer=render,plugins=[math,table])
 
-latex=template.replace("<!-- 插入 -->",latex)
+    latex=markdown(markdown_text)
 
-with open(Latex_Path,'w',encoding='utf-8') as f:
-    f.write(latex)
+    latex=template.replace("<!-- 插入 -->",latex)
+
+    file_base, file_extension = op.splitext(Markdown_Path)
+    Latex_Path=file_base+".tex"
+    with open(Latex_Path,'w',encoding='utf-8') as f:
+        f.write(latex)
+
+if __name__=="__main__":
+    main(op.join(path,"../Paper/test.md"))

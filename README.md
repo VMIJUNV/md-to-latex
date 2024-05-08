@@ -17,13 +17,16 @@ Word和LaTeX是论文写作常用的排版软件，二者各有优缺点，没�
 
 本项目已开源，项目地址:https://github.com/VMIJUNV/md-to-latex
 
-下载好相关文件后，运行Tool文件夹中的md_to_latex.py，即可将Paper里的test.md转化为output.tex。
+下载好相关文件后，首先确保电脑装有python3环境，运行Tool文件夹中的md_to_latex.py，即可将Paper里的test.md转化为test.tex，或者运行GUI.py可视化的选择待转化的文件。
+
+如果不想那么麻烦，且是windows用户，可以直接下载发行版本，点击运行Markdown转LaTeX.bat。
 
 其中Tool文件夹包含了了本项目的主要内容，它由以下几个部分组成:
 -   **mistune:** 一个开源的Markdown解析库，本项目的功能基于此库实现，本项目修改了此库的部分代码。
 -   **template.latex:** 这是LaTeX模板文件，用户可以根据自己的需求修改。
 -   **LaTeXRenderer.py:** 这是LaTeX渲染器，负责将Markdown的各元素转化为LaTeX代码，用户可以根据需要修改这个文件来实现自定义功能。
--   **md_to_latex.py:** 运行即可将Markdwon转化成LaTeX。可以通过修改代码的路径设定，以此确定源Markdown文件、目标LaTeX文件以及模板文件的位置。
+-   **md_to_latex.py:** 运行即可将Markdwon转化成LaTeX。同时定义了图表转化的规则模板。
+-   **GUI.py:** 这是一个交互界面，用户可以通过交互软件来转化Markdown文件。
 
 
 # 演示
