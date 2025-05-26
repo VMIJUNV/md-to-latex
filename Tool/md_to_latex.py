@@ -34,7 +34,8 @@ def convert(md_path,customer_convert_template_path,customer_convert_config_path,
     if customer_convert_config_path.exists():
         with open(customer_convert_config_path, 'r') as f:
             customer_convert_config = yaml.load(f, Loader=yaml.FullLoader)
-        config = default_convert_config | customer_convert_config
+        # config = default_convert_config | customer_convert_config
+        config = {**default_convert_config, **customer_convert_config}
     else:
         config = default_convert_config
 
