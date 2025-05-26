@@ -1,0 +1,79 @@
+
+
+# convert_rule
+text: |-
+  <text>
+emphasis: |-
+  \emph{<text>}
+strong: |-
+  \textbf{<text>}
+link: |-
+  \href{<url>}{<text>}
+image: |-
+  \begin{figure}[H]
+      \centering
+      \includegraphics[width=0.4\textwidth]{\rootpath<url>}
+      \caption{<title>}
+      \label{<title>}
+  \end{figure}
+codespan: |-
+  <text>
+linebreak: |-
+  \\
+softbreak: |-
+  \\
+inline_html: |-
+  <text>
+paragraph: |
+  
+  <text>
+heading: |
+
+  \<heading_types>{<text>}
+blank_line:  |-
+   
+thematic_break: |-
+  \noindent\rule{\textwidth}{1pt}
+block_text: |-
+  <text>
+block_code: |-
+  <code>
+block_quote: |-
+
+  \begin{quote}
+    <text>
+  \end{quote}
+block_html: |-
+  <html>
+ordered_list: |-
+
+  \begin{enumerate}
+    <text>
+  \end{enumerate}
+disordered_list: |-
+
+  \begin{itemize}
+    <text>
+  \end{itemize}
+list_item: |-
+  \item {<text>}
+block_math: |-
+
+  \begin{equation}
+    <text>
+  \end{equation}
+inline_math: |-
+  $<text>$
+table: |-
+  \begin{table}[H]
+      \centering
+      \begin{tabular}{<align>}
+          \toprule
+          <head>
+          \\midrule
+          <body>
+          \bottomrule
+      \end{tabular}
+  \end{table}
+
+

@@ -1,0 +1,6 @@
+{
+    "md_path": "/Users/z/Desktop/md-to-latex/Paper/markdown/test.md",
+    "customer_convert_config_path": "/Users/z/Desktop/md-to-latex/Paper/markdown/customer_convert_config.yaml",
+    "customer_convert_template_path": "/Users/z/Desktop/md-to-latex/Paper/markdown/customer_convert_template.txt",
+    "output_path": "/Users/z/Desktop/md-to-latex/Paper/latex/test.tex"
+}
