@@ -24,7 +24,7 @@ Word和LaTeX是论文写作常用的排版软件，二者各有优缺点，没�
 -   **md_to_latex.py:** 运行即可将Markdwon转化成LaTeX。同时定义了图表转化的规则模板。
 -   **GUI.py:** 这是一个交互界面，用户可以通过交互软件来转化Markdown文件。
 -   **default_convert_config.yaml:**  默认转化规则配置，定义了各个元素转换的规则。如果需要修改规则，推荐新建一个customer_convert_config.yaml文件，并在转换时加载。
--   **default_convert_template.txt:**默认的转换模版文件，用来存放latex的模版。如果需要修改模版，推荐新建一个customer_convert_template.txt文件，并在转换时加载。
+-   **default_convert_template.txt:** 默认的转换模版文件，用来存放latex的模版。如果需要修改模版，推荐新建一个customer_convert_template.txt文件，并在转换时加载。
 
 # 演示
 
